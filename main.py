@@ -1,7 +1,7 @@
 import requests
 import os
 
-API_URL = "https://app.nocodb.com/api/v2/tables/msj6ml4z41b2mp1/records"
+API_URL = f"https://app.nocodb.com/api/v2/tables/{os.getenv('NOCODB_TABLE_ID')}/records"
 API_TOKEN = os.getenv("NOCODB_API_TOKEN")
 if not API_TOKEN:
     print("Error: NOCODB_API_TOKEN environment variable is not set.")
